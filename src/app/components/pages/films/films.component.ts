@@ -17,7 +17,11 @@ export class FilmsComponent implements OnInit {
 
   ngOnInit() {
     this.subscription = this.swapiService.get(this.origem).subscribe({
-      next: (result) => {this.films = this.filmsToArray(result)},
+      next: (result) => {
+        this.films = this.filmsToArray(result.results)
+        console.log(result);
+
+      },
       error: erro => console.error(erro),
       complete: () => console.log(this.films)
     })

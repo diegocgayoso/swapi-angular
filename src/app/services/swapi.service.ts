@@ -1,22 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map, tap } from 'rxjs';
-import { ApiResult, FilmInfo, Item } from '../shared/models/interfaces';
+import { Observable, tap } from 'rxjs';
+import { RespostaAPI, Result } from '../shared/models/interfaces';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SwapiService {
   api_url = 'https://swapi.dev/api';
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  get(categoria: string): Observable<FilmInfo[]> {
+  get(category: string): Observable<any> {
     return this.http
-      .get<ApiResult>(this.api_url + '/' + categoria)
-      .pipe(
-        tap(results => console.log(results)),
-        map((results) => results.results),
-        tap(results => console.log(results)),
-      )
+      .get<RespostaAPI>(this.api_url + '/' + category)
+      .pipe(tap((results) => console.log(results)));
+  }
+
+  search(category: string, value: string): Observable<Result> {
+    return this.http
+      .get<Result>(this.api_url + '/' + category + '/' + '?search=' + value);
   }
 }

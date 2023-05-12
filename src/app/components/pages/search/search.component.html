@@ -13,4 +13,10 @@
     <input type="text" id="search" name="search" formControlName="search" />
     <button type="submit">Buscar</button>
   </form>
+  <div class="list-results">
+
+    <app-card *ngFor="let result of results">
+      <p>{{result}}</p>
+    </app-card>
+  </div>
 </section>

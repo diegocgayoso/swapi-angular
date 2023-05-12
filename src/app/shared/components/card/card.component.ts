@@ -7,5 +7,5 @@ import { Film } from '../../models/interfaces';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() filmInfos!: Film;
+  @Input() results!: [];
 }
