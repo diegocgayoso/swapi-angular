@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { SearchComponent } from './search.component';
-import { SearchRoutingModule } from './search-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
 import { CardModule } from 'src/app/shared/components/card/card.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { CardModule } from 'src/app/shared/components/card/card.module';
   ],
   imports: [
     CommonModule,
-    SearchRoutingModule,
     ReactiveFormsModule,
-    CardModule
+    CardModule,
+    FormsModule,
+    RouterModule
   ]
 })
 export class SearchModule { }

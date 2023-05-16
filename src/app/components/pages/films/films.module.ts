@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { FilmsComponent } from './films.component';
-import { FilmsRoutingModule } from './films-routing.module';
 import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
 
 @NgModule({
@@ -11,7 +11,6 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
     ],
     imports: [
         CommonModule,
-        FilmsRoutingModule,
     ]
 })
 export class FilmsModule { }

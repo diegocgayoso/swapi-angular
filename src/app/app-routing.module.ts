@@ -1,54 +1,44 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { PeopleComponent } from './components/pages/people/people.component';
+import { PlanetsComponent } from './components/pages/planets/planets.component';
+import { StarshipsComponent } from './components/pages/starships/starships.component';
+import { SearchComponent } from './components/pages/search/search.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { FilmsComponent } from './components/pages/films/films.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
-    loadChildren: () =>
-      import('./components/pages/home/home.module').then((m) => m.HomeModule),
+    component: HomeComponent,
   },
   {
     path: 'films',
-    loadChildren: () =>
-      import('./components/pages/films/films.module').then(
-        (m) => m.FilmsModule
-      ),
+    component: FilmsComponent,
   },
   {
     path: 'search',
-    loadChildren: () =>
-      import('./components/pages/search/search.module').then(
-        (m) => m.SearchModule
-      ),
+    component: SearchComponent,
   },
   {
-    path: 'peoples',
-    loadChildren: () =>
-      import('./components/pages/peoples/peoples.module').then(
-        (m) => m.PeoplesModule
-      ),
+    path: 'people',
+    component: PeopleComponent,
   },
   {
     path: 'planets',
-    loadChildren: () =>
-      import('./components/pages/planets/planets.module').then(
-        (m) => m.PlanetsModule
-      ),
+    component: PlanetsComponent,
   },
   {
     path: 'starships',
-    loadChildren: () =>
-      import('./components/pages/starships/starships.module').then(
-        (m) => m.StarshipsModule
-      ),
+    component: StarshipsComponent,
   },
+
   {
     path: '**',
-    loadChildren: () =>
-      import('./components/pages/not-found/not-found.module').then(
-        (m) => m.NotFoundModule
-      ),
+    component: NotFoundComponent,
   },
 ];
 
