@@ -35,7 +35,6 @@ const routes: Routes = [
     path: 'starships',
     component: StarshipsComponent,
   },
-
   {
     path: '**',
     component: NotFoundComponent,
@@ -46,4 +45,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

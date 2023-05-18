@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeModule } from './components/pages/home/home.module';
 import { FilmsModule } from './components/pages/films/films.module';
-import { SearchModule } from './components/pages/search/search.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { SearchModule } from './components/pages/search/search.module';
     HttpClientModule,
     HomeModule,
     FilmsModule,
+    BrowserAnimationsModule,
     // SearchModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
