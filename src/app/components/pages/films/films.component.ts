@@ -14,18 +14,27 @@ export class FilmsComponent implements OnInit {
   ) {}
 
   resultFilms: Filme[] = [];
-  colunas : string[] = ['title', 'director', 'producer', 'release_date']
+  colunas : string[] = ['title', 'director', 'producer', 'release_date'];
+  filterTitle = '';
+  showSpinner = false;
 
 
-  getFilmes() {
-    this.swapiService.getFilms().subscribe(
-      res => this.resultFilms = res.results
+  getFilms(filterTitle?: string) {
+    this.showSpinner = true
+    this.swapiService.getFilms(filterTitle).subscribe(
+      res => {
+        this.resultFilms = res.results;
+        this.showSpinner = false;
+      }
     )
   }
 
   ngOnInit() {
-    this.getFilmes()
+    this.getFilms()
+  }
 
+  filtrarPorTitulo(){
+    this.getFilms(this.filterTitle);
   }
 
   formatarData(data: string) {

@@ -9,6 +9,7 @@ import { HomeModule } from './components/pages/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FilmsComponent } from './components/pages/films/films.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FilmsComponent } from './components/pages/films/films.component';
     HttpClientModule,
     HomeModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
