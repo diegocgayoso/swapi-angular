@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Filme, RespostaAPI } from '../shared/models/interfaces';
+import { Filme, Nave, RespostaAPI } from '../shared/models/interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +18,10 @@ export class SwapiService {
     }
     return this.http
       .get<RespostaAPI<Filme>>(url);
+  }
+
+  getStarShips(){
+    const url = `${this.api_url}/starships`;
+    return this.http.get<RespostaAPI<Nave>>(url);
   }
 }
