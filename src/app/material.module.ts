@@ -1,3 +1,4 @@
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
 
 import { MatTableModule } from '@angular/material/table';
@@ -13,14 +14,16 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatPaginatorModule
   ],
   exports: [
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatPaginatorModule
   ]
 })
 
