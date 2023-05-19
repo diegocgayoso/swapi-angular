@@ -8,7 +8,6 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeModule } from './components/pages/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { SearchModule } from './components/pages/search/search.module';
 import { FilmsComponent } from './components/pages/films/films.component';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { FilmsComponent } from './components/pages/films/films.component';
     HttpClientModule,
     HomeModule,
     BrowserAnimationsModule,
-    SearchModule,
     MaterialModule
   ],
   providers: [],

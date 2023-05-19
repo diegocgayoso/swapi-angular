@@ -1,62 +1,44 @@
-export interface RespostaAPI {
-  films: string;
-  people: string;
-  planets: string;
-  species: string;
-  starships: string;
-  vehicles: string;
-}
-
-export interface Result {
+export interface RespostaAPI<T> {
   count: number;
-  results: FilmInfo[] | PeopleInfo[];
+  next: string;
+  previous: string;
+  results: T[]
 }
 
-export interface Film {
-  title?: string;
-  episode_id?: number;
-  opening_crawl?: string;
-  director?: string;
-  characters?: string[];
-  url?: string;
-}
-
-export interface Item {
-  results: FilmInfo[];
-}
-
-export interface PeopleInfo {
-  name: string;
-  height: string;
-  mass: string;
-  hair_color: string;
-  skin_color: string;
-  eye_color: string;
-  birth_year: string;
-  gender: string;
-  homeworld: string;
-  films: string[];
-  species: string[];
-  vehicles: any[];
-  starships: any[];
-  created: Date;
-  edited: Date;
-  url: string;
-}
-
-export interface FilmInfo {
+export interface Filme {
   title: string;
   episode_id: number;
   opening_crawl: string;
   director: string;
   producer: string;
-  release_date: Date;
-  characters: string[];
-  planets: string[];
+  release_date: string;
+  species: string[];
   starships: string[];
   vehicles: string[];
-  species: string[];
-  created: Date;
-  edited: Date;
+  characters: string[];
+  planets: string[];
   url: string;
+  created: string;
+  edited: string;
+}
+
+export interface Nave {
+  name: string;
+  model: string;
+  starship_class: string;
+  manufacturer: string;
+  cost_in_credits: string;
+  length: string;
+  crew: string;
+  passengers: string;
+  max_atmosphering_speed: string;
+  hyperdrive_rating: string;
+  MGLT: string;
+  cargo_capacity: string;
+  consumables: string;
+  films: string[];
+  pilots: string[];
+  url: string;
+  created: string;
+  edited: string;
 }
