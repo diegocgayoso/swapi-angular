@@ -43,9 +43,6 @@ export class StarshipsComponent implements OnInit {
       this.detailsStarships = [];
       this.detailsStarships.push(row);
       console.log(row);
-
     }
   }
-
-
 }

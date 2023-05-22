@@ -23,15 +23,10 @@
       <tr mat-header-row *matHeaderRowDef="colunas"></tr>
       <tr mat-row *matRowDef="let row; columns: colunas" (click)="clickedRow(row)"></tr>
     </table>
-    <mat-paginator
-      aria-label="Selecione a página"
-      [length]="totalStarships"
-      [pageSize]="10"
-      [pageIndex]="paginaAtual - 1"
-      (page)="changePagination($event)"
-      >
+    <mat-paginator aria-label="Selecione a página" [length]="totalStarships" [pageSize]="10"
+      [pageIndex]="paginaAtual - 1" (page)="changePagination($event)">
 
-</mat-paginator>
+    </mat-paginator>
 
   </div>
   <div class="details" *ngIf="detailsStarships">
@@ -41,9 +36,7 @@
       <p>Valor:
         {{details.cost_in_credits}}$</p>
       <p>velocidade atmosférica máxima:
-          {{details.max_atmosphering_speed}}
-
-
+        {{details.max_atmosphering_speed}}
     </div>
   </div>
 </div>
