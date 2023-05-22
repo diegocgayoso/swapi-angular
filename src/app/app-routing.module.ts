@@ -15,14 +15,15 @@ const routes: Routes = [
     path: 'films',
     component: FilmsComponent,
   },
+
   {
     path: 'starships',
     component: StarshipsComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
