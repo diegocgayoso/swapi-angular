@@ -8,7 +8,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { HomeModule } from './components/pages/home/home.module';
 import { MaterialModule } from './material.module';
 import { FilmsComponent } from './components/pages/films/films.component';
 
@@ -26,7 +25,6 @@ import { FilmsComponent } from './components/pages/films/films.component';
     FormsModule,
     MaterialModule,
     HttpClientModule,
-    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
