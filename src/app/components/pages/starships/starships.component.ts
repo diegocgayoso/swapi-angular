@@ -17,6 +17,8 @@ export class StarshipsComponent implements OnInit {
   totalStarships!: number;
   paginaAtual = 1;
 
+  detailsStarships: Nave[] = [];
+
   constructor(private swapiService: SwapiService) {}
   ngOnInit(){
     this.getStarShips();
@@ -35,7 +37,14 @@ export class StarshipsComponent implements OnInit {
   changePagination(e: PageEvent){
     this.paginaAtual = e.pageIndex + 1;
     this.getStarShips(this.paginaAtual);
+  }
+  clickedRow(row: Nave){
+    if(this.detailsStarships){
+      this.detailsStarships = [];
+      this.detailsStarships.push(row);
+      console.log(row);
 
+    }
   }
 
 
